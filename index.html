@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Restaurante</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background: #fff3e0;
+        }
+        h1 {
+            color: #e65100;
+        }
+        .comida {
+            background: white;
+            padding: 20px;
+            margin: 15px auto;
+            width: 250px;
+            border-radius: 10px;
+        }
+        button {
+            background: #ff6d00;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🍔 Mi Restaurante</h1>
+    <div class="comida">
+        <h2>Hamburguesa 🍔</h2>
+        <p>$80</p>
+        <button onclick="comprar(80)">Comprar</button>
+    </div>
+    <div class="comida">
+        <h2>Papas 🍟</h2>
+        <p>$40</p>
+        <button onclick="comprar(40)">Comprar</button>
+    </div>
+    <div class="comida">
+        <h2>Refresco 🥤</h2>
+        <p>$25</p>
+        <button onclick="comprar(25)">Comprar</button>
+    </div>
+    <h2>Total: $<span id="total">0</span></h2>
+    <script>
+        let total = 0;
+        function comprar(precio) {
+            total = total + precio;
+            document.getElementById("total").textContent = total;
+        }
+    </script>
+</body>
+</html>
